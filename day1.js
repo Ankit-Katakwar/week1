@@ -1,15 +1,20 @@
-const name = "Ankit Katakwar"
-const age = 24
-const isStudent = true
-const businessName = "Coal India Limited"
-const hobbies = ["Coding", "Traveling", "Cooking"]
-
-const myprofile = {
-    name: name,
-    age: age,
-    isStudent: isStudent,
-    businessName: businessName,
-    hobbies: hobbies
+const company = {
+  name: "Katakwar Coal",
+  owner: {
+    name: "Ankit",
+    age: 23,
+    contact: {
+      phone: "9876543210",
+      email: "ankit@coal.com"
+    }
+  },
+  inventory: ["Bituminous", "Anthracite"],
+  getOwnerEmail() {
+    return this.owner.contact.email
+  }
 }
 
-console.log(myprofile)
+// Access karna
+console.log(company.owner.name)              // Ankit
+console.log(company.owner.contact.phone)     // 9876543210
+console.log(company.getOwnerEmail())         // ankit@coal.com
