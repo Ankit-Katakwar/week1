@@ -21,3 +21,4 @@ console.log(price);
 console.log(quantityInTON);
 console.log(inverntoryValue)
 console.log("found" ,findCoal)
+console.log(upperCase);
