@@ -1,35 +1,19 @@
-const user = {
-  name: "Ankit",
-  age: 23,
-  city: "Bhopal",
-  role: "developer"
-}
-
-// Basic destructuring
-const { name, age } = user
-console.log(name) // Ankit
-
-const { name: userName, age: userAge } = user
-console.log(userName) // Ankit
-console.log(userAge)  // 23
-
-const { name: n, salary = 50000 } = user
-console.log(salary) 
-
 const company = {
   name: "Katakwar Coal",
   owner: {
     name: "Ankit",
-    city: "Bhopal"
-  }
+    city: "Bhopal",
+  },
+};
+
+// Destructuring
+// const {name:businessName,owner:{name:ownerName , city}} = company
+
+// console.log(ownerName)
+// console.log(businessName)
+
+function greet({ name:businessName,owner: { name: ownerNaam, city } }) {
+  console.log(`My name is ${ownerNaam} and I live in ${city} also I run a business called ${businessName}`);
 }
 
-const { owner: { name: ownerName, city } } = company
-console.log(ownerName) 
-console.log(city)      
-
-const printUser = ({ name, age, city = "Unknown" }) => {
-  console.log(`${name}, ${age}, ${city}`)
-}
-
-printUser(user) 
+greet(company);
