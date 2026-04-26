@@ -1,16 +1,37 @@
-// LOOPS PRACTICE - DAY 1
+const inventory = [
+  { type: "Bituminous", price: 5000, quantity: 100 },
+  { type: "Anthracite", price: 8000, quantity: 50 },
+  { type: "Lignite", price: 2000, quantity: 200 },
+];
 
-console.log("Start Practice");
+const getTotalValue = (price, quantity) => {
+ return  price * quantity;
+};
 
-// Write your code below 👇
+const getCategory = (price, name = "Coal") => {
+  if (price >= 7000) {
+    return name + ": Is Premium";
+  }
+  if (price <= 5000) {
+    return name + ": Is standard";
+  }
+  return name + ": Is Econony";
+};
 
 
-let totalCount = 0 ;
+const report = inventory.map((item,idx)=>{
+    const totalValue = getTotalValue(item.price,item.quantity)
+    const category = getCategory(item.price,item.type)
 
-for (let i = 1 ; i<=100 ;i++){
 
-    if(i%15==0){
-        totalCount++
+    return{
+index:idx +1,
+type:item.type,
+category:category,
+totalValue:totalValue
+
     }
-}
-console.log(totalCount)
+
+})
+
+console.log(report)
