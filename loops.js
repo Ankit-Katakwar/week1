@@ -3,7 +3,7 @@ const inventory = [
   { type: "Anthracite", price: 8000, quantity: 50 },
   { type: "Lignite", price: 2000, quantity: 200 },
 ];
-
+const name = "John Doe";
 const getTotalValue = (price, quantity) => {
  return  price * quantity;
 };
