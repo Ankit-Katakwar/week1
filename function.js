@@ -1,5 +1,5 @@
 console.log("Hello function");
-
+// Function declaration
 function getEven(nums) {
    let max = null;
    let secondMax = 0;
